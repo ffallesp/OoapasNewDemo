@@ -489,8 +489,96 @@ var OoapasNewDemo;
 (function (OoapasNewDemo) {
     var Texts;
     (function (Texts) {
-        OoapasNewDemo['Texts'] = Q.proxyTexts(Texts, '', { Db: { Administration: { Language: { Id: 1, LanguageId: 1, LanguageName: 1 }, Role: { RoleId: 1, RoleName: 1 }, RolePermission: { PermissionKey: 1, RoleId: 1, RolePermissionId: 1, RoleRoleName: 1 }, Translation: { CustomText: 1, EntityPlural: 1, Key: 1, OverrideConfirmation: 1, SaveChangesButton: 1, SourceLanguage: 1, SourceText: 1, TargetLanguage: 1, TargetText: 1 }, User: { DisplayName: 1, Email: 1, InsertDate: 1, InsertUserId: 1, IsActive: 1, LastDirectoryUpdate: 1, Password: 1, PasswordConfirm: 1, PasswordHash: 1, PasswordSalt: 1, Source: 1, UpdateDate: 1, UpdateUserId: 1, UserId: 1, UserImage: 1, Username: 1 }, UserPermission: { Granted: 1, PermissionKey: 1, User: 1, UserId: 1, UserPermissionId: 1, Username: 1 }, UserRole: { RoleId: 1, User: 1, UserId: 1, UserRoleId: 1, Username: 1 } }, Common: { UserPreference: { Name: 1, PreferenceType: 1, UserId: 1, UserPreferenceId: 1, Value: 1 } } }, Forms: { Membership: { ChangePassword: { FormTitle: 1, SubmitButton: 1, Success: 1 }, ForgotPassword: { BackToLogin: 1, FormInfo: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, Login: { FacebookButton: 1, ForgotPassword: 1, FormTitle: 1, GoogleButton: 1, OR: 1, RememberMe: 1, SignInButton: 1, SignUpButton: 1 }, ResetPassword: { BackToLogin: 1, EmailSubject: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, SignUp: { AcceptTerms: 1, ActivateEmailSubject: 1, ActivationCompleteMessage: 1, BackToLogin: 1, ConfirmEmail: 1, ConfirmPassword: 1, DisplayName: 1, Email: 1, FormInfo: 1, FormTitle: 1, Password: 1, SubmitButton: 1, Success: 1 } } }, Site: { AccessDenied: { ClickToChangeUser: 1, ClickToLogin: 1, LackPermissions: 1, NotLoggedIn: 1, PageTitle: 1 }, BasicProgressDialog: { CancelTitle: 1, PleaseWait: 1 }, BulkServiceAction: { AllHadErrorsFormat: 1, AllSuccessFormat: 1, ConfirmationFormat: 1, ErrorCount: 1, NothingToProcess: 1, SomeHadErrorsFormat: 1, SuccessCount: 1 }, Dashboard: { ContentDescription: 1 }, Layout: { FooterCopyright: 1, FooterInfo: 1, FooterRights: 1, GeneralSettings: 1, Language: 1, Theme: 1, ThemeBlack: 1, ThemeBlackLight: 1, ThemeBlue: 1, ThemeBlueLight: 1, ThemeGreen: 1, ThemeGreenLight: 1, ThemePurple: 1, ThemePurpleLight: 1, ThemeRed: 1, ThemeRedLight: 1, ThemeYellow: 1, ThemeYellowLight: 1 }, RolePermissionDialog: { DialogTitle: 1, EditButton: 1, SaveSuccess: 1 }, UserDialog: { EditPermissionsButton: 1, EditRolesButton: 1 }, UserPermissionDialog: { DialogTitle: 1, Grant: 1, Permission: 1, Revoke: 1, SaveSuccess: 1 }, UserRoleDialog: { DialogTitle: 1, SaveSuccess: 1 }, ValidationError: { Title: 1 } }, Validation: { AuthenticationError: 1, CantFindUserWithEmail: 1, CurrentPasswordMismatch: 1, DeleteForeignKeyError: 1, EmailConfirm: 1, EmailInUse: 1, InvalidActivateToken: 1, InvalidResetToken: 1, MinRequiredPasswordLength: 1, SavePrimaryKeyError: 1 } });
+        OoapasNewDemo['Texts'] = Q.proxyTexts(Texts, '', { Db: { Administration: { Language: { Id: 1, LanguageId: 1, LanguageName: 1 }, Role: { RoleId: 1, RoleName: 1 }, RolePermission: { PermissionKey: 1, RoleId: 1, RolePermissionId: 1, RoleRoleName: 1 }, Translation: { CustomText: 1, EntityPlural: 1, Key: 1, OverrideConfirmation: 1, SaveChangesButton: 1, SourceLanguage: 1, SourceText: 1, TargetLanguage: 1, TargetText: 1 }, User: { DisplayName: 1, Email: 1, InsertDate: 1, InsertUserId: 1, IsActive: 1, LastDirectoryUpdate: 1, Password: 1, PasswordConfirm: 1, PasswordHash: 1, PasswordSalt: 1, Source: 1, UpdateDate: 1, UpdateUserId: 1, UserId: 1, UserImage: 1, Username: 1 }, UserPermission: { Granted: 1, PermissionKey: 1, User: 1, UserId: 1, UserPermissionId: 1, Username: 1 }, UserRole: { RoleId: 1, User: 1, UserId: 1, UserRoleId: 1, Username: 1 } }, Common: { UserPreference: { Name: 1, PreferenceType: 1, UserId: 1, UserPreferenceId: 1, Value: 1 } }, Usuarios: { Catalago: { Activo: 1, Administrador: 1, ClaveAcceso: 1, Cuando: 1, Departamento: 1, DiasCc: 1, Donde: 1, Empleado: 1, Entidad: 1, FecNacimiento: 1, FechaPc: 1, FechaUc: 1, FechaVig: 1, Grupo: 1, InactividadOut: 1, JefeInmediato: 1, NoSesiones: 1, NoSesionesAct: 1, Nombre: 1, NombreAcceso: 1, Obs: 1, Oficina: 1, OficinaOper: 1, PerfilTRep: 1, Puesto: 1, Quien: 1, SubSistema: 1, TelExt: 1, Usuario: 1, Vigencia: 1 } } }, Forms: { Membership: { ChangePassword: { FormTitle: 1, SubmitButton: 1, Success: 1 }, ForgotPassword: { BackToLogin: 1, FormInfo: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, Login: { FacebookButton: 1, ForgotPassword: 1, FormTitle: 1, GoogleButton: 1, OR: 1, RememberMe: 1, SignInButton: 1, SignUpButton: 1 }, ResetPassword: { BackToLogin: 1, EmailSubject: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, SignUp: { AcceptTerms: 1, ActivateEmailSubject: 1, ActivationCompleteMessage: 1, BackToLogin: 1, ConfirmEmail: 1, ConfirmPassword: 1, DisplayName: 1, Email: 1, FormInfo: 1, FormTitle: 1, Password: 1, SubmitButton: 1, Success: 1 } } }, Site: { AccessDenied: { ClickToChangeUser: 1, ClickToLogin: 1, LackPermissions: 1, NotLoggedIn: 1, PageTitle: 1 }, BasicProgressDialog: { CancelTitle: 1, PleaseWait: 1 }, BulkServiceAction: { AllHadErrorsFormat: 1, AllSuccessFormat: 1, ConfirmationFormat: 1, ErrorCount: 1, NothingToProcess: 1, SomeHadErrorsFormat: 1, SuccessCount: 1 }, Dashboard: { ContentDescription: 1 }, Layout: { FooterCopyright: 1, FooterInfo: 1, FooterRights: 1, GeneralSettings: 1, Language: 1, Theme: 1, ThemeBlack: 1, ThemeBlackLight: 1, ThemeBlue: 1, ThemeBlueLight: 1, ThemeGreen: 1, ThemeGreenLight: 1, ThemePurple: 1, ThemePurpleLight: 1, ThemeRed: 1, ThemeRedLight: 1, ThemeYellow: 1, ThemeYellowLight: 1 }, RolePermissionDialog: { DialogTitle: 1, EditButton: 1, SaveSuccess: 1 }, UserDialog: { EditPermissionsButton: 1, EditRolesButton: 1 }, UserPermissionDialog: { DialogTitle: 1, Grant: 1, Permission: 1, Revoke: 1, SaveSuccess: 1 }, UserRoleDialog: { DialogTitle: 1, SaveSuccess: 1 }, ValidationError: { Title: 1 } }, Validation: { AuthenticationError: 1, CantFindUserWithEmail: 1, CurrentPasswordMismatch: 1, DeleteForeignKeyError: 1, EmailConfirm: 1, EmailInUse: 1, InvalidActivateToken: 1, InvalidResetToken: 1, MinRequiredPasswordLength: 1, SavePrimaryKeyError: 1 } });
     })(Texts = OoapasNewDemo.Texts || (OoapasNewDemo.Texts = {}));
+})(OoapasNewDemo || (OoapasNewDemo = {}));
+var OoapasNewDemo;
+(function (OoapasNewDemo) {
+    var Usuarios;
+    (function (Usuarios) {
+        var CatalagoForm = /** @class */ (function (_super) {
+            __extends(CatalagoForm, _super);
+            function CatalagoForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!CatalagoForm.init) {
+                    CatalagoForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.IntegerEditor;
+                    var w1 = s.StringEditor;
+                    var w2 = s.DateEditor;
+                    var w3 = s.BooleanEditor;
+                    Q.initFormType(CatalagoForm, [
+                        'Entidad', w0,
+                        'SubSistema', w0,
+                        'Empleado', w1,
+                        'Oficina', w0,
+                        'Nombre', w1,
+                        'JefeInmediato', w1,
+                        'Departamento', w1,
+                        'Puesto', w1,
+                        'FecNacimiento', w2,
+                        'NombreAcceso', w1,
+                        'ClaveAcceso', w1,
+                        'Activo', w3,
+                        'DiasCc', w0,
+                        'FechaUc', w2,
+                        'FechaPc', w2,
+                        'NoSesiones', w0,
+                        'NoSesionesAct', w0,
+                        'InactividadOut', w0,
+                        'Vigencia', w3,
+                        'FechaVig', w2,
+                        'TelExt', w1,
+                        'Obs', w1,
+                        'Quien', w0,
+                        'Cuando', w2,
+                        'Donde', w0,
+                        'Grupo', w0,
+                        'Administrador', w0,
+                        'PerfilTRep', w0,
+                        'OficinaOper', w1
+                    ]);
+                }
+                return _this;
+            }
+            CatalagoForm.formKey = 'Usuarios.Catalago';
+            return CatalagoForm;
+        }(Serenity.PrefixedContext));
+        Usuarios.CatalagoForm = CatalagoForm;
+    })(Usuarios = OoapasNewDemo.Usuarios || (OoapasNewDemo.Usuarios = {}));
+})(OoapasNewDemo || (OoapasNewDemo = {}));
+var OoapasNewDemo;
+(function (OoapasNewDemo) {
+    var Usuarios;
+    (function (Usuarios) {
+        var CatalagoRow;
+        (function (CatalagoRow) {
+            CatalagoRow.idProperty = 'Usuario';
+            CatalagoRow.nameProperty = 'Empleado';
+            CatalagoRow.localTextPrefix = 'Usuarios.Catalago';
+        })(CatalagoRow = Usuarios.CatalagoRow || (Usuarios.CatalagoRow = {}));
+    })(Usuarios = OoapasNewDemo.Usuarios || (OoapasNewDemo.Usuarios = {}));
+})(OoapasNewDemo || (OoapasNewDemo = {}));
+var OoapasNewDemo;
+(function (OoapasNewDemo) {
+    var Usuarios;
+    (function (Usuarios) {
+        var CatalagoService;
+        (function (CatalagoService) {
+            CatalagoService.baseUrl = 'Usuarios/Catalago';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                CatalagoService[x] = function (r, s, o) {
+                    return Q.serviceRequest(CatalagoService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(CatalagoService = Usuarios.CatalagoService || (Usuarios.CatalagoService = {}));
+    })(Usuarios = OoapasNewDemo.Usuarios || (OoapasNewDemo.Usuarios = {}));
 })(OoapasNewDemo || (OoapasNewDemo = {}));
 var OoapasNewDemo;
 (function (OoapasNewDemo) {
@@ -2652,6 +2740,52 @@ var OoapasNewDemo;
         }());
         Common.UserPreferenceStorage = UserPreferenceStorage;
     })(Common = OoapasNewDemo.Common || (OoapasNewDemo.Common = {}));
+})(OoapasNewDemo || (OoapasNewDemo = {}));
+var OoapasNewDemo;
+(function (OoapasNewDemo) {
+    var Usuarios;
+    (function (Usuarios) {
+        var CatalagoDialog = /** @class */ (function (_super) {
+            __extends(CatalagoDialog, _super);
+            function CatalagoDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Usuarios.CatalagoForm(_this.idPrefix);
+                return _this;
+            }
+            CatalagoDialog.prototype.getFormKey = function () { return Usuarios.CatalagoForm.formKey; };
+            CatalagoDialog.prototype.getIdProperty = function () { return Usuarios.CatalagoRow.idProperty; };
+            CatalagoDialog.prototype.getLocalTextPrefix = function () { return Usuarios.CatalagoRow.localTextPrefix; };
+            CatalagoDialog.prototype.getNameProperty = function () { return Usuarios.CatalagoRow.nameProperty; };
+            CatalagoDialog.prototype.getService = function () { return Usuarios.CatalagoService.baseUrl; };
+            CatalagoDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], CatalagoDialog);
+            return CatalagoDialog;
+        }(Serenity.EntityDialog));
+        Usuarios.CatalagoDialog = CatalagoDialog;
+    })(Usuarios = OoapasNewDemo.Usuarios || (OoapasNewDemo.Usuarios = {}));
+})(OoapasNewDemo || (OoapasNewDemo = {}));
+var OoapasNewDemo;
+(function (OoapasNewDemo) {
+    var Usuarios;
+    (function (Usuarios) {
+        var CatalagoGrid = /** @class */ (function (_super) {
+            __extends(CatalagoGrid, _super);
+            function CatalagoGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            CatalagoGrid.prototype.getColumnsKey = function () { return 'Usuarios.Catalago'; };
+            CatalagoGrid.prototype.getDialogType = function () { return Usuarios.CatalagoDialog; };
+            CatalagoGrid.prototype.getIdProperty = function () { return Usuarios.CatalagoRow.idProperty; };
+            CatalagoGrid.prototype.getLocalTextPrefix = function () { return Usuarios.CatalagoRow.localTextPrefix; };
+            CatalagoGrid.prototype.getService = function () { return Usuarios.CatalagoService.baseUrl; };
+            CatalagoGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], CatalagoGrid);
+            return CatalagoGrid;
+        }(Serenity.EntityGrid));
+        Usuarios.CatalagoGrid = CatalagoGrid;
+    })(Usuarios = OoapasNewDemo.Usuarios || (OoapasNewDemo.Usuarios = {}));
 })(OoapasNewDemo || (OoapasNewDemo = {}));
 var OoapasNewDemo;
 (function (OoapasNewDemo) {

@@ -580,6 +580,134 @@ declare namespace OoapasNewDemo {
 }
 declare namespace OoapasNewDemo.Texts {
 }
+declare namespace OoapasNewDemo.Usuarios {
+}
+declare namespace OoapasNewDemo.Usuarios {
+    interface CatalagoForm {
+        Entidad: Serenity.IntegerEditor;
+        SubSistema: Serenity.IntegerEditor;
+        Empleado: Serenity.StringEditor;
+        Oficina: Serenity.IntegerEditor;
+        Nombre: Serenity.StringEditor;
+        JefeInmediato: Serenity.StringEditor;
+        Departamento: Serenity.StringEditor;
+        Puesto: Serenity.StringEditor;
+        FecNacimiento: Serenity.DateEditor;
+        NombreAcceso: Serenity.StringEditor;
+        ClaveAcceso: Serenity.StringEditor;
+        Activo: Serenity.BooleanEditor;
+        DiasCc: Serenity.IntegerEditor;
+        FechaUc: Serenity.DateEditor;
+        FechaPc: Serenity.DateEditor;
+        NoSesiones: Serenity.IntegerEditor;
+        NoSesionesAct: Serenity.IntegerEditor;
+        InactividadOut: Serenity.IntegerEditor;
+        Vigencia: Serenity.BooleanEditor;
+        FechaVig: Serenity.DateEditor;
+        TelExt: Serenity.StringEditor;
+        Obs: Serenity.StringEditor;
+        Quien: Serenity.IntegerEditor;
+        Cuando: Serenity.DateEditor;
+        Donde: Serenity.IntegerEditor;
+        Grupo: Serenity.IntegerEditor;
+        Administrador: Serenity.IntegerEditor;
+        PerfilTRep: Serenity.IntegerEditor;
+        OficinaOper: Serenity.StringEditor;
+    }
+    class CatalagoForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace OoapasNewDemo.Usuarios {
+    interface CatalagoRow {
+        Usuario?: number;
+        Entidad?: number;
+        SubSistema?: number;
+        Empleado?: string;
+        Oficina?: number;
+        Nombre?: string;
+        JefeInmediato?: string;
+        Departamento?: string;
+        Puesto?: string;
+        FecNacimiento?: string;
+        NombreAcceso?: string;
+        ClaveAcceso?: string;
+        Activo?: boolean;
+        DiasCc?: number;
+        FechaUc?: string;
+        FechaPc?: string;
+        NoSesiones?: number;
+        NoSesionesAct?: number;
+        InactividadOut?: number;
+        Vigencia?: boolean;
+        FechaVig?: string;
+        TelExt?: string;
+        Obs?: string;
+        Quien?: number;
+        Cuando?: string;
+        Donde?: number;
+        Grupo?: number;
+        Administrador?: number;
+        PerfilTRep?: number;
+        OficinaOper?: string;
+    }
+    namespace CatalagoRow {
+        const idProperty = "Usuario";
+        const nameProperty = "Empleado";
+        const localTextPrefix = "Usuarios.Catalago";
+        const enum Fields {
+            Usuario = "Usuario",
+            Entidad = "Entidad",
+            SubSistema = "SubSistema",
+            Empleado = "Empleado",
+            Oficina = "Oficina",
+            Nombre = "Nombre",
+            JefeInmediato = "JefeInmediato",
+            Departamento = "Departamento",
+            Puesto = "Puesto",
+            FecNacimiento = "FecNacimiento",
+            NombreAcceso = "NombreAcceso",
+            ClaveAcceso = "ClaveAcceso",
+            Activo = "Activo",
+            DiasCc = "DiasCc",
+            FechaUc = "FechaUc",
+            FechaPc = "FechaPc",
+            NoSesiones = "NoSesiones",
+            NoSesionesAct = "NoSesionesAct",
+            InactividadOut = "InactividadOut",
+            Vigencia = "Vigencia",
+            FechaVig = "FechaVig",
+            TelExt = "TelExt",
+            Obs = "Obs",
+            Quien = "Quien",
+            Cuando = "Cuando",
+            Donde = "Donde",
+            Grupo = "Grupo",
+            Administrador = "Administrador",
+            PerfilTRep = "PerfilTRep",
+            OficinaOper = "OficinaOper"
+        }
+    }
+}
+declare namespace OoapasNewDemo.Usuarios {
+    namespace CatalagoService {
+        const baseUrl = "Usuarios/Catalago";
+        function Create(request: Serenity.SaveRequest<CatalagoRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<CatalagoRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<CatalagoRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<CatalagoRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Usuarios/Catalago/Create",
+            Update = "Usuarios/Catalago/Update",
+            Delete = "Usuarios/Catalago/Delete",
+            Retrieve = "Usuarios/Catalago/Retrieve",
+            List = "Usuarios/Catalago/List"
+        }
+    }
+}
 declare namespace OoapasNewDemo.LanguageList {
     function getValue(): string[][];
 }
@@ -1002,6 +1130,26 @@ declare namespace OoapasNewDemo.Common {
     class UserPreferenceStorage implements Serenity.SettingStorage {
         getItem(key: string): string;
         setItem(key: string, data: string): void;
+    }
+}
+declare namespace OoapasNewDemo.Usuarios {
+    class CatalagoDialog extends Serenity.EntityDialog<CatalagoRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: CatalagoForm;
+    }
+}
+declare namespace OoapasNewDemo.Usuarios {
+    class CatalagoGrid extends Serenity.EntityGrid<CatalagoRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof CatalagoDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
     }
 }
 declare namespace OoapasNewDemo.Authorization {
