@@ -97,5 +97,14 @@ namespace MVC
             public const string LeftNavigation = "~/Views/Shared/LeftNavigation.cshtml";
         }
 
+        public static class Usuarios
+        {
+            public static class Catalago
+            {
+                public const string CatalagoIndex = "~/Modules/Usuarios/Catalago/CatalagoIndex.cshtml";
+            }
+
+        }
+
     }
 }

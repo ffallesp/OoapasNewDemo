@@ -8092,3 +8092,9 @@ section.content > .s-DataGrid {
   font-style: italic;
   color: #966;
 }
+.s-Usuarios-CatalagoDialog > .size {
+  width: 650px;
+}
+.s-Usuarios-CatalagoDialog .caption {
+  width: 150px;
+}
