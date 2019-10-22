@@ -6,9 +6,9 @@ namespace OoapasNewDemo.Membership {
     [FormScript("Membership.Login")]
     [BasedOnRow(typeof(Administration.Entities.UserRow), CheckNames = true)]
     public class LoginRequest : ServiceRequest {
-        [Placeholder("default username is 'admin'")]
+        [Placeholder("")]
         public string Username { get; set; }
-        [PasswordEditor, Placeholder("default password for 'admin' is 'serenity'"), Required(true)]
+        [PasswordEditor, Placeholder(""), Required(true)]
         public string Password { get; set; }
     }
 }
