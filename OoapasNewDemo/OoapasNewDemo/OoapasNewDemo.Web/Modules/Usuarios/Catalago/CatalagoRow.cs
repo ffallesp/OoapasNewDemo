@@ -1,6 +1,5 @@
 ﻿
-namespace OoapasNewDemo.Usuarios.Entities
-{
+namespace OoapasNewDemo.Usuarios.Entities {
     using Serenity;
     using Serenity.ComponentModel;
     using Serenity.Data;
@@ -11,8 +10,10 @@ namespace OoapasNewDemo.Usuarios.Entities
 
     [ConnectionKey("Usuarios"), Module("Usuarios"), TableName("[dbo].[USU_Catalogo]")]
     [DisplayName("Catalago"), InstanceName("Usuario")]
-    [ReadPermission("Administration:General")]
-    [ModifyPermission("Administration:General")]
+    //[ReadPermission("Administration:General")]
+    //[ModifyPermission("Administration:General")]
+    [ReadPermission(PermissionKeys.Catalago)]
+    [ModifyPermission(PermissionKeys.Catalago)]
     public sealed class CatalagoRow : Row, IIdRow, INameRow
     {
         [DisplayName("Usuario"), PrimaryKey]
