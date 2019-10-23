@@ -708,11 +708,6 @@ declare namespace OoapasNewDemo.Usuarios {
         }
     }
 }
-declare namespace OoapasNewDemo.LanguageList {
-    function getValue(): string[][];
-}
-declare namespace OoapasNewDemo.ScriptInitialization {
-}
 declare namespace OoapasNewDemo.Administration {
     class LanguageDialog extends Serenity.EntityDialog<LanguageRow, any> {
         protected getFormKey(): string;
@@ -824,6 +819,10 @@ declare namespace OoapasNewDemo.Administration {
         protected getDefaultSortBy(): UserRow.Fields[];
     }
 }
+declare namespace OoapasNewDemo.Authorization {
+    let userDefinition: ScriptUserDefinition;
+    function hasPermission(permissionKey: string): boolean;
+}
 declare namespace OoapasNewDemo.Administration {
     class PermissionCheckEditor extends Serenity.DataGrid<PermissionCheckItem, PermissionCheckEditorOptions> {
         protected getIdProperty(): string;
@@ -894,6 +893,11 @@ declare namespace OoapasNewDemo.Administration {
         userID: number;
         username: string;
     }
+}
+declare namespace OoapasNewDemo.LanguageList {
+    function getValue(): string[][];
+}
+declare namespace OoapasNewDemo.ScriptInitialization {
 }
 declare namespace OoapasNewDemo {
     class BasicProgressDialog extends Serenity.TemplatedDialog<any> {
@@ -1036,8 +1040,6 @@ declare namespace OoapasNewDemo.Common {
 declare namespace OoapasNewDemo.Common {
     class SidebarSearch extends Serenity.Widget<any> {
         private menuUL;
-        constructor(input: JQuery, menuUL: JQuery);
-        protected updateMatchFlags(text: string): void;
     }
 }
 declare namespace OoapasNewDemo.Common {
@@ -1132,30 +1134,6 @@ declare namespace OoapasNewDemo.Common {
         setItem(key: string, data: string): void;
     }
 }
-declare namespace OoapasNewDemo.Usuarios {
-    class CatalagoDialog extends Serenity.EntityDialog<CatalagoRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: CatalagoForm;
-    }
-}
-declare namespace OoapasNewDemo.Usuarios {
-    class CatalagoGrid extends Serenity.EntityGrid<CatalagoRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof CatalagoDialog;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace OoapasNewDemo.Authorization {
-    let userDefinition: ScriptUserDefinition;
-    function hasPermission(permissionKey: string): boolean;
-}
 declare namespace OoapasNewDemo.Membership {
     class ChangePasswordPanel extends Serenity.PropertyPanel<ChangePasswordRequest, any> {
         protected getFormKey(): string;
@@ -1181,6 +1159,26 @@ declare namespace OoapasNewDemo.Membership {
     class SignUpPanel extends Serenity.PropertyPanel<SignUpRequest, any> {
         protected getFormKey(): string;
         private form;
+        constructor(container: JQuery);
+    }
+}
+declare namespace OoapasNewDemo.Usuarios {
+    class CatalagoDialog extends Serenity.EntityDialog<CatalagoRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: CatalagoForm;
+    }
+}
+declare namespace OoapasNewDemo.Usuarios {
+    class CatalagoGrid extends Serenity.EntityGrid<CatalagoRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof CatalagoDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
         constructor(container: JQuery);
     }
 }
