@@ -2,4 +2,4 @@
 using MyPages = OoapasNewDemo.Usuarios.Pages;
 
 [assembly: NavigationLink(int.MaxValue, "Usuarios", url: "~/", permission: "", icon: "fa-users")]
-[assembly: NavigationLink(int.MaxValue, "Usuarios/Catalago", typeof(MyPages.CatalagoController), icon: null)]
+[assembly: NavigationLink(int.MaxValue, "Usuarios/Catalogo", typeof(MyPages.CatalagoController), icon: null)]

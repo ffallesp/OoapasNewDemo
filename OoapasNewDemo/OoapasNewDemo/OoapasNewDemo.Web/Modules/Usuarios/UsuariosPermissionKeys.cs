@@ -6,7 +6,7 @@ namespace OoapasNewDemo.Usuarios {
     [NestedPermissionKeys]
     [DisplayName("Usuarios")]
     public class PermissionKeys {
-        [Description("Catalago")]
+        [Description("Catalogo")]
         public const string Catalago = "Usuarios:Catalogo";
 
     }

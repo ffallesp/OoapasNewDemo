@@ -9,7 +9,7 @@ namespace OoapasNewDemo.Usuarios.Entities {
     using System.IO;
 
     [ConnectionKey("Usuarios"), Module("Usuarios"), TableName("[dbo].[USU_Catalogo]")]
-    [DisplayName("Catalago"), InstanceName("Usuario")]
+    [DisplayName("Catalogo"), InstanceName("Usuario")]
     //[ReadPermission("Administration:General")]
     //[ModifyPermission("Administration:General")]
     [ReadPermission(PermissionKeys.Catalago)]
