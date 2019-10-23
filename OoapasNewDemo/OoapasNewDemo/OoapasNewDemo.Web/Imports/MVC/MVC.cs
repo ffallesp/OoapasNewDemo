@@ -89,6 +89,11 @@ namespace MVC
 
         public static class ModuloComercial
         {
+            public static class Contratos
+            {
+                public const string ContratosIndex = "~/Modules/ModuloComercial/Contratos/ContratosIndex.cshtml";
+            }
+
             public static class Padron
             {
                 public const string PadronIndex = "~/Modules/ModuloComercial/Padron/PadronIndex.cshtml";
