@@ -582,38 +582,6 @@ var OoapasNewDemo;
 })(OoapasNewDemo || (OoapasNewDemo = {}));
 var OoapasNewDemo;
 (function (OoapasNewDemo) {
-    var LanguageList;
-    (function (LanguageList) {
-        function getValue() {
-            var result = [];
-            for (var _i = 0, _a = OoapasNewDemo.Administration.LanguageRow.getLookup().items; _i < _a.length; _i++) {
-                var k = _a[_i];
-                if (k.LanguageId !== 'en') {
-                    result.push([k.Id.toString(), k.LanguageName]);
-                }
-            }
-            return result;
-        }
-        LanguageList.getValue = getValue;
-    })(LanguageList = OoapasNewDemo.LanguageList || (OoapasNewDemo.LanguageList = {}));
-})(OoapasNewDemo || (OoapasNewDemo = {}));
-/// <reference path="../Common/Helpers/LanguageList.ts" />
-var OoapasNewDemo;
-(function (OoapasNewDemo) {
-    var ScriptInitialization;
-    (function (ScriptInitialization) {
-        Q.Config.responsiveDialogs = true;
-        Q.Config.rootNamespaces.push('OoapasNewDemo');
-        Serenity.EntityDialog.defaultLanguageList = OoapasNewDemo.LanguageList.getValue;
-        if ($.fn['colorbox']) {
-            $.fn['colorbox'].settings.maxWidth = "95%";
-            $.fn['colorbox'].settings.maxHeight = "95%";
-        }
-        window.onerror = Q.ErrorHandling.runtimeErrorHandler;
-    })(ScriptInitialization = OoapasNewDemo.ScriptInitialization || (OoapasNewDemo.ScriptInitialization = {}));
-})(OoapasNewDemo || (OoapasNewDemo = {}));
-var OoapasNewDemo;
-(function (OoapasNewDemo) {
     var Administration;
     (function (Administration) {
         var LanguageDialog = /** @class */ (function (_super) {
@@ -1144,6 +1112,22 @@ var OoapasNewDemo;
 })(OoapasNewDemo || (OoapasNewDemo = {}));
 var OoapasNewDemo;
 (function (OoapasNewDemo) {
+    var Authorization;
+    (function (Authorization) {
+        Object.defineProperty(Authorization, 'userDefinition', {
+            get: function () {
+                return Q.getRemoteData('UserData');
+            }
+        });
+        function hasPermission(permissionKey) {
+            var ud = Authorization.userDefinition;
+            return ud.Username === 'admin' || !!ud.Permissions[permissionKey];
+        }
+        Authorization.hasPermission = hasPermission;
+    })(Authorization = OoapasNewDemo.Authorization || (OoapasNewDemo.Authorization = {}));
+})(OoapasNewDemo || (OoapasNewDemo = {}));
+var OoapasNewDemo;
+(function (OoapasNewDemo) {
     var Administration;
     (function (Administration) {
         var PermissionCheckEditor = /** @class */ (function (_super) {
@@ -1613,6 +1597,38 @@ var OoapasNewDemo;
         }(Serenity.TemplatedDialog));
         Administration.UserRoleDialog = UserRoleDialog;
     })(Administration = OoapasNewDemo.Administration || (OoapasNewDemo.Administration = {}));
+})(OoapasNewDemo || (OoapasNewDemo = {}));
+var OoapasNewDemo;
+(function (OoapasNewDemo) {
+    var LanguageList;
+    (function (LanguageList) {
+        function getValue() {
+            var result = [];
+            for (var _i = 0, _a = OoapasNewDemo.Administration.LanguageRow.getLookup().items; _i < _a.length; _i++) {
+                var k = _a[_i];
+                if (k.LanguageId !== 'en') {
+                    result.push([k.Id.toString(), k.LanguageName]);
+                }
+            }
+            return result;
+        }
+        LanguageList.getValue = getValue;
+    })(LanguageList = OoapasNewDemo.LanguageList || (OoapasNewDemo.LanguageList = {}));
+})(OoapasNewDemo || (OoapasNewDemo = {}));
+/// <reference path="../Common/Helpers/LanguageList.ts" />
+var OoapasNewDemo;
+(function (OoapasNewDemo) {
+    var ScriptInitialization;
+    (function (ScriptInitialization) {
+        Q.Config.responsiveDialogs = true;
+        Q.Config.rootNamespaces.push('OoapasNewDemo');
+        Serenity.EntityDialog.defaultLanguageList = OoapasNewDemo.LanguageList.getValue;
+        if ($.fn['colorbox']) {
+            $.fn['colorbox'].settings.maxWidth = "95%";
+            $.fn['colorbox'].settings.maxHeight = "95%";
+        }
+        window.onerror = Q.ErrorHandling.runtimeErrorHandler;
+    })(ScriptInitialization = OoapasNewDemo.ScriptInitialization || (OoapasNewDemo.ScriptInitialization = {}));
 })(OoapasNewDemo || (OoapasNewDemo = {}));
 var OoapasNewDemo;
 (function (OoapasNewDemo) {
@@ -2741,68 +2757,6 @@ var OoapasNewDemo;
 })(OoapasNewDemo || (OoapasNewDemo = {}));
 var OoapasNewDemo;
 (function (OoapasNewDemo) {
-    var Usuarios;
-    (function (Usuarios) {
-        var CatalagoDialog = /** @class */ (function (_super) {
-            __extends(CatalagoDialog, _super);
-            function CatalagoDialog() {
-                var _this = _super !== null && _super.apply(this, arguments) || this;
-                _this.form = new Usuarios.CatalagoForm(_this.idPrefix);
-                return _this;
-            }
-            CatalagoDialog.prototype.getFormKey = function () { return Usuarios.CatalagoForm.formKey; };
-            CatalagoDialog.prototype.getIdProperty = function () { return Usuarios.CatalagoRow.idProperty; };
-            CatalagoDialog.prototype.getLocalTextPrefix = function () { return Usuarios.CatalagoRow.localTextPrefix; };
-            CatalagoDialog.prototype.getNameProperty = function () { return Usuarios.CatalagoRow.nameProperty; };
-            CatalagoDialog.prototype.getService = function () { return Usuarios.CatalagoService.baseUrl; };
-            CatalagoDialog = __decorate([
-                Serenity.Decorators.registerClass()
-            ], CatalagoDialog);
-            return CatalagoDialog;
-        }(Serenity.EntityDialog));
-        Usuarios.CatalagoDialog = CatalagoDialog;
-    })(Usuarios = OoapasNewDemo.Usuarios || (OoapasNewDemo.Usuarios = {}));
-})(OoapasNewDemo || (OoapasNewDemo = {}));
-var OoapasNewDemo;
-(function (OoapasNewDemo) {
-    var Usuarios;
-    (function (Usuarios) {
-        var CatalagoGrid = /** @class */ (function (_super) {
-            __extends(CatalagoGrid, _super);
-            function CatalagoGrid(container) {
-                return _super.call(this, container) || this;
-            }
-            CatalagoGrid.prototype.getColumnsKey = function () { return 'Usuarios.Catalago'; };
-            CatalagoGrid.prototype.getDialogType = function () { return Usuarios.CatalagoDialog; };
-            CatalagoGrid.prototype.getIdProperty = function () { return Usuarios.CatalagoRow.idProperty; };
-            CatalagoGrid.prototype.getLocalTextPrefix = function () { return Usuarios.CatalagoRow.localTextPrefix; };
-            CatalagoGrid.prototype.getService = function () { return Usuarios.CatalagoService.baseUrl; };
-            CatalagoGrid = __decorate([
-                Serenity.Decorators.registerClass()
-            ], CatalagoGrid);
-            return CatalagoGrid;
-        }(Serenity.EntityGrid));
-        Usuarios.CatalagoGrid = CatalagoGrid;
-    })(Usuarios = OoapasNewDemo.Usuarios || (OoapasNewDemo.Usuarios = {}));
-})(OoapasNewDemo || (OoapasNewDemo = {}));
-var OoapasNewDemo;
-(function (OoapasNewDemo) {
-    var Authorization;
-    (function (Authorization) {
-        Object.defineProperty(Authorization, 'userDefinition', {
-            get: function () {
-                return Q.getRemoteData('UserData');
-            }
-        });
-        function hasPermission(permissionKey) {
-            var ud = Authorization.userDefinition;
-            return ud.Username === 'admin' || !!ud.Permissions[permissionKey];
-        }
-        Authorization.hasPermission = hasPermission;
-    })(Authorization = OoapasNewDemo.Authorization || (OoapasNewDemo.Authorization = {}));
-})(OoapasNewDemo || (OoapasNewDemo = {}));
-var OoapasNewDemo;
-(function (OoapasNewDemo) {
     var Membership;
     (function (Membership) {
         var ChangePasswordPanel = /** @class */ (function (_super) {
@@ -2978,5 +2932,61 @@ var OoapasNewDemo;
         }(Serenity.PropertyPanel));
         Membership.SignUpPanel = SignUpPanel;
     })(Membership = OoapasNewDemo.Membership || (OoapasNewDemo.Membership = {}));
+})(OoapasNewDemo || (OoapasNewDemo = {}));
+var OoapasNewDemo;
+(function (OoapasNewDemo) {
+    var Usuarios;
+    (function (Usuarios) {
+        var CatalagoDialog = /** @class */ (function (_super) {
+            __extends(CatalagoDialog, _super);
+            function CatalagoDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Usuarios.CatalagoForm(_this.idPrefix);
+                return _this;
+            }
+            CatalagoDialog.prototype.getFormKey = function () { return Usuarios.CatalagoForm.formKey; };
+            CatalagoDialog.prototype.getIdProperty = function () { return Usuarios.CatalagoRow.idProperty; };
+            CatalagoDialog.prototype.getLocalTextPrefix = function () { return Usuarios.CatalagoRow.localTextPrefix; };
+            CatalagoDialog.prototype.getNameProperty = function () { return Usuarios.CatalagoRow.nameProperty; };
+            CatalagoDialog.prototype.getService = function () { return Usuarios.CatalagoService.baseUrl; };
+            CatalagoDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], CatalagoDialog);
+            return CatalagoDialog;
+        }(Serenity.EntityDialog));
+        Usuarios.CatalagoDialog = CatalagoDialog;
+    })(Usuarios = OoapasNewDemo.Usuarios || (OoapasNewDemo.Usuarios = {}));
+})(OoapasNewDemo || (OoapasNewDemo = {}));
+var OoapasNewDemo;
+(function (OoapasNewDemo) {
+    var Usuarios;
+    (function (Usuarios) {
+        var CatalagoGrid = /** @class */ (function (_super) {
+            __extends(CatalagoGrid, _super);
+            function CatalagoGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            CatalagoGrid.prototype.getColumnsKey = function () { return 'Usuarios.Catalago'; };
+            CatalagoGrid.prototype.getDialogType = function () { return Usuarios.CatalagoDialog; };
+            CatalagoGrid.prototype.getIdProperty = function () { return Usuarios.CatalagoRow.idProperty; };
+            CatalagoGrid.prototype.getLocalTextPrefix = function () { return Usuarios.CatalagoRow.localTextPrefix; };
+            CatalagoGrid.prototype.getService = function () { return Usuarios.CatalagoService.baseUrl; };
+            CatalagoGrid.prototype.getQuickSearchFields = function () {
+                var fld = Usuarios.CatalagoRow.Fields;
+                return [
+                    { name: "", title: "all" },
+                    { name: "Empleado" /* Empleado */, title: "Empleado" },
+                    { name: "Nombre" /* Nombre */, title: "Nombre" },
+                    { name: "Puesto" /* Puesto */, title: "Puesto" },
+                    { name: "NombreAcceso" /* NombreAcceso */, title: "Nombre usuario" }
+                ];
+            };
+            CatalagoGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], CatalagoGrid);
+            return CatalagoGrid;
+        }(Serenity.EntityGrid));
+        Usuarios.CatalagoGrid = CatalagoGrid;
+    })(Usuarios = OoapasNewDemo.Usuarios || (OoapasNewDemo.Usuarios = {}));
 })(OoapasNewDemo || (OoapasNewDemo = {}));
 //# sourceMappingURL=OoapasNewDemo.Web.js.map
