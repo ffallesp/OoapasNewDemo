@@ -98,6 +98,15 @@ namespace MVC
             {
                 public const string PadronIndex = "~/Modules/ModuloComercial/Padron/PadronIndex.cshtml";
             }
+
+        }
+
+        public static class ModuloOperacion
+        {
+            public static class ReportesSolicitudes
+            {
+                public const string ReportesSolicitudesIndex = "~/Modules/ModuloOperacion/ReportesSolicitudes/ReportesSolicitudesIndex.cshtml";
+            }
         }
 
         public static class Shared

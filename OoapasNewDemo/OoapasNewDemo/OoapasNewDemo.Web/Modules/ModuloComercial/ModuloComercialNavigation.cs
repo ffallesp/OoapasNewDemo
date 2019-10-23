@@ -1,6 +1,6 @@
 ﻿using Serenity.Navigation;
 using MyPages = OoapasNewDemo.ModuloComercial.Pages;
 
-[assembly: NavigationLink(int.MaxValue, "ModuloComercial/Padron", typeof(MyPages.PadronController), icon: null)]
-
-[assembly: NavigationLink(int.MaxValue, "ModuloComercial/Contratos", typeof(MyPages.ContratosController), icon: null)]
+[assembly: NavigationLink(1000, "Modulo Comercial", url: "~/", permission: "", icon: "fa-briefcase")]
+[assembly: NavigationLink(int.MaxValue, "Modulo Comercial/Padron", typeof(MyPages.PadronController), icon: null)]
+[assembly: NavigationLink(int.MaxValue, "Modulo Comercial/Contratos", typeof(MyPages.ContratosController), icon: null)]

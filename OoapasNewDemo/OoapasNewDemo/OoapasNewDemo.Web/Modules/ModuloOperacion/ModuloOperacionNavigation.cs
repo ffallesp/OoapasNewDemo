@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Serenity.Navigation;
+using MyPages = OoapasNewDemo.ModuloOperacion.Pages;
 
-namespace Ooapas.Web.Modules.ModuloOperacion
-{
-    public class Class
-    {
-    }
-}
+[assembly: NavigationLink(1000, "Modulo Operacion", url: "~/", permission: "", icon: " fa-file-excel-o")]
+[assembly: NavigationLink(int.MaxValue, "Modulo Operacion/Reportes y Solicitudes", typeof(MyPages.ReportesSolicitudesController), icon: null)]
