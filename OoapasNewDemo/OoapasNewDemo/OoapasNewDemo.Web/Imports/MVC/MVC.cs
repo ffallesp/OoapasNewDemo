@@ -84,6 +84,15 @@ namespace MVC
                     public const string AccountSignUp_AdminLTE = "~/Modules/Membership/Account/SignUp/AccountSignUp.AdminLTE.cshtml";
                 }
             }
+
+        }
+
+        public static class ModuloComercial
+        {
+            public static class Padron
+            {
+                public const string PadronIndex = "~/Modules/ModuloComercial/Padron/PadronIndex.cshtml";
+            }
         }
 
         public static class Shared

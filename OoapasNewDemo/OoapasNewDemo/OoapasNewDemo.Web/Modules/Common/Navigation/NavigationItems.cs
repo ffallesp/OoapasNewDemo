@@ -3,7 +3,7 @@ using Administration = OoapasNewDemo.Administration.Pages;
 
 [assembly: NavigationLink(1000, "Dashboard", url: "~/", permission: "", icon: "fa-tachometer")]
 [assembly: NavigationLink(1001, "Modulo Comercial", url: "", permission: "", icon: "")]
-[assembly: NavigationLink(1002, "Modulo Comercial/Padron", url: "~/", permission: "", icon: "")]
+[assembly: NavigationLink(1002, "Modulo Comercial/Padron", url: "ModuloComercial/Padron", permission: "", icon: "")]
 [assembly: NavigationLink(1003, "Modulo Comercial/Contratos", url: "~/", permission: "", icon: "")]
 [assembly: NavigationLink(1004, "Modulo Comercial/Hidrometria", url: "~/", permission: "", icon: "")]
 [assembly: NavigationLink(1005, "Modulo Comercial/Facturacion", url: "~/", permission: "", icon: "")]

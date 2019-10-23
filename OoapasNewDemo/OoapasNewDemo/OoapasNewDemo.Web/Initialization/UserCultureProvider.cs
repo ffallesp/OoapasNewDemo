@@ -29,7 +29,7 @@ namespace OoapasNewDemo.AppServices {
                 }
             }
 
-            return Task.FromResult(new ProviderCultureResult(culture ?? "en-US", culture ?? "en-US"));
+            return Task.FromResult(new ProviderCultureResult(culture ?? "es-ES", culture ?? "es-ES"));
         }
 
         private static List<CultureInfo> supportedCultures;
