@@ -89,9 +89,29 @@ namespace MVC
 
         public static class ModuloComercial
         {
+            public static class AnalisisGerencial
+            {
+                public const string AnalisisIndex = "~/Modules/ModuloComercial/AnalisisGerencial/AnalisisIndex.cshtml";
+            }
+
             public static class Contratos
             {
                 public const string ContratosIndex = "~/Modules/ModuloComercial/Contratos/ContratosIndex.cshtml";
+            }
+
+            public static class Facturacion
+            {
+                public const string FacturacionIndex = "~/Modules/ModuloComercial/Facturacion/FacturacionIndex.cshtml";
+            }
+
+            public static class GestionCobranza
+            {
+                public const string GestionIndex = "~/Modules/ModuloComercial/GestionCobranza/GestionIndex.cshtml";
+            }
+
+            public static class Hidrometria
+            {
+                public const string HidrometriaIndex = "~/Modules/ModuloComercial/Hidrometria/HidrometriaIndex.cshtml";
             }
 
             public static class Padron
@@ -99,10 +119,30 @@ namespace MVC
                 public const string PadronIndex = "~/Modules/ModuloComercial/Padron/PadronIndex.cshtml";
             }
 
+            public static class Recaudacion
+            {
+                public const string RecaudacionIndex = "~/Modules/ModuloComercial/Recaudacion/RecaudacionIndex.cshtml";
+            }
+
+            public static class Servicios
+            {
+                public const string ServiciosIndex = "~/Modules/ModuloComercial/Servicios/ServiciosIndex.cshtml";
+            }
+
         }
 
         public static class ModuloOperacion
         {
+            public static class Factibilidades
+            {
+                public const string FactibilidadesIndex = "~/Modules/ModuloOperacion/Factibilidades/FactibilidadesIndex.cshtml";
+            }
+
+            public static class OrdenesServicios
+            {
+                public const string OrdenesIndex = "~/Modules/ModuloOperacion/OrdenesServicios/OrdenesIndex.cshtml";
+            }
+
             public static class ReportesSolicitudes
             {
                 public const string ReportesSolicitudesIndex = "~/Modules/ModuloOperacion/ReportesSolicitudes/ReportesSolicitudesIndex.cshtml";
